@@ -1,0 +1,45 @@
+
+
+informações de contato do cliente:
+
+Venha nos conhecer!
+
+Seg. a Sábado das 7:00 às 19:00
+
+Domingo e feriados
+
+8 as 12:00 | 15:00 as 19:00
+
+(47) 3325-9403 WhatsApp
+
+
+importante
+
+ const button = document.querySelector('button')
+        const popup = document.querySelector('.popup-wrapper')
+        const CloseButton = document.querySelector('.popup-close')
+
+
+        button.addEventListener('click', () => {
+           popup.style.display = 'block'
+        })
+
+        popup.addEventListener('click', event =>{
+            const classNameOFClickedElement = event.target.classList[0]
+            console.log(classNameOFClickedElement)
+            //popup.style.display = 'none'
+        })
+
+
+
+
+        codigo problema em produção
+
+         popup.addEventListener('click', event =>{
+            const classNameOFClickedElement = event.target.classList[0]
+            if (classNameOFClickedElement === 'popup-close' || classNameOFClickedElement === 'popup-link' || classNameOFClickedElement === 'popup-wrapper'){
+                popup.style.display = 'none'
+                
+            }
+            
+        })
